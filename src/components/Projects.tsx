@@ -9,6 +9,12 @@ const Projects = () => {
       domain: "Finance",
       description:
         "Built an advanced data-driven system for credit risk management using AWS S3, Pandas, NumPy, Matplotlib, Seaborn, and Flask API for deployment.",
+      keyFeatures: [
+        "Credit Risk Assessment",
+        "Real-time Fraud Detection",
+        "Interactive Dashboard",
+        "API Integration",
+      ],
       technologies: ["AWS S3", "Python", "Flask", "Pandas", "Matplotlib", "Seaborn"],
       color: "from-blue-500/20 to-purple-500/20",
     },
@@ -17,6 +23,12 @@ const Projects = () => {
       domain: "Healthcare",
       description:
         "Used NLP and ML to uncover customer sentiments and causes of adverse drug events through Word2Vec, TF-IDF, and clustering models.",
+      keyFeatures: [
+        "Sentiment Analysis",
+        "Text Preprocessing",
+        "Adverse Event Detection",
+        "Clustering Models",
+      ],
       technologies: ["NLP", "Word2Vec", "TF-IDF", "Clustering", "Python", "Scikit-learn"],
       color: "from-green-500/20 to-teal-500/20",
     },
@@ -52,6 +64,20 @@ const Projects = () => {
                   </div>
 
                   <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+
+                  {project.keyFeatures && (
+                    <div className="space-y-2">
+                      <h4 className="text-sm font-semibold text-foreground">Key Features:</h4>
+                      <ul className="grid grid-cols-2 gap-2">
+                        {project.keyFeatures.map((feature, idx) => (
+                          <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   <div className="flex flex-wrap gap-2 pt-4">
                     {project.technologies.map((tech, techIndex) => (

@@ -13,8 +13,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "dhruvsoni1999@gmail.com",
-      link: "mailto:dhruvsoni1999@gmail.com",
+      value: "dhruvsonii1999@gmail.com",
+      link: "mailto:dhruvsonii1999@gmail.com",
     },
     {
       icon: Github,
@@ -80,10 +80,27 @@ const Contact = () => {
             ))}
           </div>
 
+          <Card className="p-8 bg-card border-border hover:border-primary/50 transition-all duration-300 animate-fade-in">
+            <h3 className="text-xl font-bold text-center mb-6">Available For:</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+              {[
+                "Freelance Data Science Projects",
+                "Full-time Data Scientist Roles",
+                "ML Consulting & Advisory",
+                "Dashboard Development",
+              ].map((service, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  <span className="text-muted-foreground">{service}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+
           <div className="text-center pt-8 animate-fade-in-delayed">
             <Button
               size="lg"
-              onClick={() => window.location.href = "mailto:dhruvsoni1999@gmail.com"}
+              onClick={() => window.location.href = "mailto:dhruvsonii1999@gmail.com"}
               className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--glow-gold)] hover:shadow-[var(--glow-gold)] hover:scale-105 transition-all duration-300"
             >
               Discuss Your Project

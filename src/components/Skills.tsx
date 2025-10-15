@@ -21,7 +21,11 @@ const Skills = () => {
     },
     {
       category: "Cloud & Tools",
-      skills: ["AWS S3", "Flask", "Postman", "Git", "Hadoop", "Spark"],
+      skills: ["AWS S3", "Flask", "Postman", "Git", "Hadoop", "Spark", "SQL"],
+    },
+    {
+      category: "Deep Learning",
+      skills: ["TensorFlow", "Neural Networks"],
     },
   ];
 

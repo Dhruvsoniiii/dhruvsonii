@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { GraduationCap, BookOpen } from "lucide-react";
 
 const Education = () => {
@@ -6,17 +7,21 @@ const Education = () => {
     {
       degree: "Post Graduate Diploma",
       field: "Machine Learning & Artificial Intelligence",
+      institution: "Specialized AI Institute",
+      year: "2023",
       icon: GraduationCap,
     },
     {
       degree: "Bachelor of Commerce",
-      field: "University of Mumbai",
+      field: "Business & Finance",
+      institution: "University of Mumbai",
+      year: "2022",
       icon: GraduationCap,
     },
   ];
 
   const continuousLearning = [
-    "Hadoop", "R Programming", "API Development", "Postman", "Git", "Apache Spark", "Data Mining"
+    "Hadoop", "R Programming", "API Development", "Postman", "Git", "Apache Spark", "Data Mining", "Advanced Statistics"
   ];
 
   return (
@@ -39,8 +44,12 @@ const Education = () => {
                     <edu.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">{edu.degree}</h3>
-                    <p className="text-muted-foreground">{edu.field}</p>
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-xl font-bold text-foreground">{edu.degree}</h3>
+                      <Badge variant="outline" className="border-primary/50 text-primary">{edu.year}</Badge>
+                    </div>
+                    <p className="text-muted-foreground font-medium">{edu.field}</p>
+                    <p className="text-sm text-muted-foreground/80 mt-1">{edu.institution}</p>
                   </div>
                 </div>
               </Card>

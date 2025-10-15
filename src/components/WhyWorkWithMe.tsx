@@ -33,15 +33,27 @@ const WhyWorkWithMe = () => {
             <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in mb-12">
+            {[
+              { title: "Deep ML/AI Expertise", desc: "Advanced knowledge in machine learning algorithms and AI implementations" },
+              { title: "Strong Ethics", desc: "Committed to data privacy, ethical AI practices, and responsible analytics" },
+              { title: "Collaboration Mindset", desc: "Excellent communication skills and ability to work in cross-functional teams" },
+              { title: "Practical Problem-Solving", desc: "Focus on delivering real-world solutions that drive business value" },
+            ].map((strength, index) => (
+              <Card
+                key={index}
+                className="p-6 bg-gradient-to-br from-card to-secondary border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
+              >
+                <h4 className="text-lg font-bold text-primary mb-2">{strength.title}</h4>
+                <p className="text-sm text-muted-foreground">{strength.desc}</p>
+              </Card>
+            ))}
+          </div>
+
           <Card className="p-8 md:p-12 bg-card border-border hover:border-primary/50 transition-all duration-300 animate-fade-in">
-            <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                <span className="text-primary font-semibold">Strengths:</span> Deep ML/AI expertise, strong ethics, collaboration mindset, and practical problem-solving.
-              </p>
-              <p className="text-lg text-foreground leading-relaxed">
-                Eager to contribute my data science and ML skills to impactful, data-driven business solutions that drive real results.
-              </p>
-            </div>
+            <p className="text-lg text-foreground leading-relaxed text-center italic">
+              "Eager to contribute my data science and ML skills to impactful, data-driven business solutions."
+            </p>
           </Card>
 
           <div className="space-y-4 animate-fade-in-delayed">
