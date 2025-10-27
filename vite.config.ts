@@ -5,6 +5,11 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // **********************************************
+  // ADDED: This line fixes the asset loading on GitHub Pages.
+  // Replace '/dhruvsonii/' with your actual repository name if it changes.
+  base: "/dhruvsonii/", 
+  // **********************************************
   server: {
     host: "::",
     port: 8080,
